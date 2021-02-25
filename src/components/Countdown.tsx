@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { CountdownContext } from '../contexts/CountdownContext';
 
-import { BsFillPlayFill, BsX } from "react-icons/bs";
+import { IoIosPlay, IoIosCheckmarkCircle, IoIosClose } from "react-icons/io";
 
 import styles from '../styles/components/Countdown.module.css';
 
@@ -37,7 +37,7 @@ export function Countdown() {
           disabled
           className={styles.countdownButton}
         >
-          Ciclo encerrado
+          Ciclo encerrado <IoIosCheckmarkCircle style={{ marginLeft: '0.5rem', marginTop: '0.1rem', color: '#4cd62b' }} />
         </button>
       ) : (
         <>
@@ -47,7 +47,7 @@ export function Countdown() {
               className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
               onClick={resetCountDown}
             >
-              Abandonar ciclo <BsX style={{ fontSize: '1rem', marginLeft: '0.2rem', marginTop: '0.15rem' }} />
+              Abandonar ciclo <IoIosClose style={{ fontSize: '1.8rem', marginLeft: '0.5rem', marginTop: '0.1rem' }} />
             </button>
           ) : (
             <button 
@@ -55,7 +55,7 @@ export function Countdown() {
               className={styles.countdownButton}
               onClick={startCountdown}
             >
-              Iniciar um ciclo <BsFillPlayFill style={{ fontSize: '1rem', marginLeft: '0.2rem', marginTop: '0.15rem' }} />
+              Iniciar um ciclo <IoIosPlay style={{ marginLeft: '0.5rem', marginTop: '0.1rem' }} />
             </button>
           )}
         </>
