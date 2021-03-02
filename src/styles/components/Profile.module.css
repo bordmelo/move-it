@@ -28,29 +28,3 @@
 .profileContainer div p img {
   margin-right: 0.5rem;
 }
-
-.profileContainer div:last-child {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.profileContainer button {
-  right: 0;
-  height: 3rem;
-  width: 3rem;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  border-radius: 5px;
-  background: var(--gray-line);
-  color: var(--text);
-  transition: background-color 0.2s;
-  outline: 0
-}
-
-.profileContainer button:hover {
-  background: var(--red);
-  color: var(--white);
-}

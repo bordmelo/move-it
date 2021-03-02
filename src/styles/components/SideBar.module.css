@@ -1,0 +1,83 @@
+.sidebarContainer {
+  background: linear-gradient(var(--white), var(--background));
+  height: 100vh;
+  width: 7rem;
+  position: absolute;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebarContainer .logo {
+  display: flex;
+  place-content: center;
+  margin-top: 2rem;
+}
+
+.sidebarContainer div:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebarContainer button {
+  right: 0;
+  height: 6rem;
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: none;
+  color: var(--text);
+  transition: color 0.2s;
+  outline: 0
+}
+
+.sidebarContainer button:hover {
+  color: var(--blue);
+}
+
+.menuItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.menuItems ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.menuItems ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 1rem;
+  transition: color 0.2s;
+  margin-bottom: 0.25rem;
+}
+
+.menuItems ul li:hover {
+  cursor: pointer;
+  color: var(--blue);
+}
+
+.menuItems .activeMenu::before {
+  content: " ";
+  position: absolute;
+  height: 4rem;
+  left: 0;
+  width: 5px;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--blue);
+}
+
+.menuItems li.activeMenu  {
+  color: var(--blue);
+}

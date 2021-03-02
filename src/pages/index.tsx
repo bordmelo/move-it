@@ -5,6 +5,7 @@ import { Profile } from "../components/Profile";
 import { ChallengeBox } from "../components/ChallengeBox";
 import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengesProvider } from "../contexts/ChallengesContext";
+import { SideBar } from "../components/SideBar";
 
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
@@ -24,6 +25,7 @@ export default function Home(props: HomeProps) {
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
+      <SideBar />
       <div className={styles.container}>
         <Head>
           <title>Início | Move.it</title>
