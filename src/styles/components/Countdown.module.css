@@ -59,6 +59,17 @@
 .countdownButtonActive {
   background: var(--white);
   color: var(--title);
+  position: relative;
+}
+
+.countdownButtonActive div{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.25rem;
+  border-radius: 0  0 0 5px;
+  background: var(--green);
+  transition: width 0.5s;
 }
 
 .countdownButtonActive:not(:disabled):hover {

@@ -7,6 +7,7 @@ import styles from '../styles/components/Countdown.module.css';
 
 export function Countdown() {
   const { 
+    time,
     minutes,
     seconds,
     hasFinished,
@@ -17,6 +18,7 @@ export function Countdown() {
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
+  const cyclePercent = 100 - ((time * 100) / 1500);
 
   return (
     <div>
@@ -48,6 +50,7 @@ export function Countdown() {
               onClick={resetCountDown}
             >
               Abandonar ciclo <IoIosClose style={{ fontSize: '1.8rem', marginLeft: '0.5rem', marginTop: '0.1rem' }} />
+              <div style={{ width: `${cyclePercent}%` }} />
             </button>
           ) : (
             <button 
