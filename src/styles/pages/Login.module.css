@@ -1,0 +1,74 @@
+.background {
+  background: var(--blue);
+}
+
+.loginContainer { 
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginContainer section {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.25rem;
+  align-content: center;
+}
+
+.loginContainer section div:first-child img {
+  margin-left: -34.375rem;
+}
+
+.loginContainer section div:last-child {
+  display: flex;
+  place-content: center;
+  flex-direction: column;
+}
+
+.loginContainer section div:last-child strong {
+  margin-top: 5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.githubLogin {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.githubLogin img {
+  height: 60%;
+}
+
+.githubLogin span {
+  margin-left: 1.25rem;
+  font-size: 1.25rem;
+  color: var(--text-highlight);
+}
+
+.loginButton {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+  border: 0;
+  border-radius: 5px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  outline: none;
+}
+
+.loginButton:not(:disabled):hover {
+  background: var(--green-dark);
+}
