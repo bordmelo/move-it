@@ -71,32 +71,44 @@
 
 .challengeActive footer {
   display: grid;
+  margin: -1.5rem -2rem;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
 }
 
 .challengeActive footer button {
-  height: 3rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 0;
-  border-radius: 5px;
-  color: var(--white);
+  border-radius: 0;
   font-size: 1rem;
   font-weight: 600;
-  transition: filter 0.2s;
+  transition: background 0.2s;
   outline: none;
 }
 
 .challengeActive footer button.challengeFailedButton {
-  background: var(--red);
+  color: var(--red);
+  border-radius: 0 0 0 5px;
+  background: var(--red-light);
+  border-top: 1px solid var(--gray-line);
 }
 
 .challengeActive footer button.challengeSuccededButton {
-  background: var(--green);
+  color: var(--green);
+  border-radius: 0 0 5px 0;
+  background: var(--green-light);
+  border-left: 1px solid var(--gray-line);
+  border-top: 1px solid var(--gray-line);
 }
 
-.challengeActive footer button:hover {
-  filter: brightness(0.9);
+.challengeActive footer button.challengeFailedButton:hover {
+  color: var(--white);
+  background: var(--red);
+}
+
+.challengeActive footer button.challengeSuccededButton:hover {
+  color: var(--white);
+  background: var(--green);
 }
