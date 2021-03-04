@@ -4,7 +4,11 @@ import { FiHome, FiLogOut, FiAward } from "react-icons/fi";
 
 import styles from '../styles/components/SideBar.module.css';
 
-export function SideBar() {
+interface SideBarProps {
+  active: string;
+}
+
+export function SideBar(props: SideBarProps) {
   function handleLogout() {
     Router.push('/login');
   }
@@ -16,10 +20,10 @@ export function SideBar() {
       </div>
       <div className={styles.menuItems}>
         <ul>
-          <li className={styles.activeMenu}>
+          <li className={ props.active === 'home' ? `${styles.activeMenu}` : ''} onClick={() => Router.push('/')} >
             <FiHome />
           </li>
-          <li>
+          <li className={ props.active === 'leaderboard' ? `${styles.activeMenu}` : ''} onClick={() => Router.push('/leaderboard')} >
             <FiAward />
           </li>
         </ul>

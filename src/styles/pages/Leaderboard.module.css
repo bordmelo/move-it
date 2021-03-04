@@ -1,0 +1,33 @@
+.leaderboardContainer {
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboardContainer strong {
+  font-size: 2.25rem;
+  color: var(--title)
+}
+
+.leaderboardContainer .userList {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.leaderboardContainer .userList header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leaderboardContainer .userList header span {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.leaderboardContainer .userList header span:last-child {
+  margin-right: 5rem;
+}
